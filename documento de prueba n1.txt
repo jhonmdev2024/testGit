@@ -1,0 +1,43 @@
+/*
+    Dado un numero determinar cuantos digitos tiene. Cree una funcion para resolver el problema
+*/
+
+
+#include <iostream>
+
+using namespace std;
+
+
+// Prototipos de subalgoritmos (subprogramas)
+int calcularCantidadDigitos(int n);
+
+
+// Funcion principal
+int main(){
+
+    int n, cantidad;
+
+    cout << "Ingrese un numero entero: ";
+    cin >> n;
+
+    cantidad = calcularCantidadDigitos(n);
+
+    cout << "Cantidad de digitos: " << cantidad << endl;
+
+    return 0;
+}
+
+
+// Subalgoritmos
+int calcularCantidadDigitos(int n){
+
+    int cantDigitos = 0;
+
+    do{
+        n = n / 10;
+        cantDigitos += 1;
+    }while(n != 0);
+
+    return cantDigitos;
+
+}
